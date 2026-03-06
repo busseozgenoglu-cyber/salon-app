@@ -2,6 +2,24 @@
 
 Güzellik salonu yönetimi için masaüstü uygulaması. Randevular, müşteriler, ayarlar ve Instagram kampanya özellikleri.
 
+## Proje Yapısı
+
+```
+salon-app/
+├── start.sh          # Hızlı başlatma scripti
+├── main.js           # Electron ana dosya
+├── package.json      # Bağımlılıklar ve scriptler
+├── backend/
+│   ├── server.js     # API sunucusu (Express)
+│   └── data/         # Veriler (settings, customers, appointments)
+├── src/
+│   ├── App.js        # Ana uygulama
+│   ├── api.js       # API çağrıları
+│   └── components/   # Randevular, Müşteriler, Ayarlar, Instagram Kampanya
+└── public/
+    └── index.html
+```
+
 ## Kurulum
 
 ```bash
@@ -10,8 +28,13 @@ npm install
 
 ## Çalıştırma
 
-**Önemli:** Uygulama hem backend sunucusu hem de Electron/React gerektirir. Tek komutla başlatın:
+**Yöntem 1 - start.sh ile (Linux/Mac):**
+```bash
+chmod +x start.sh
+./start.sh
+```
 
+**Yöntem 2 - npm ile:**
 ```bash
 npm start
 ```
