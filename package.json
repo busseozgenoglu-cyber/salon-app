@@ -5,15 +5,12 @@
   "main": "main.js",
   "homepage": "./",
   "scripts": {
-    "react-start": "react-scripts start",
-    "react-build": "react-scripts build",
-    "react-test": "react-scripts test",
-    "react-eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "electron-start": "electron .",
-    "electron-dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-build": "npm run react-build && electron-builder",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
     "start": "concurrently \"npm run server\" \"npm run electron-dev\"",
-    "build": "npm run electron-build",
     "server": "node backend/server.js"
   },
   "dependencies": {
@@ -27,30 +24,20 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
-    "react-scripts": "5.0.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0",
     "electron": "^28.0.0",
     "electron-builder": "^24.9.1",
     "concurrently": "^7.6.0",
     "wait-on": "^7.0.1"
   },
-  "overrides": {
-    "html-webpack-plugin": "5.5.4"
-  },
+  "author": "busseozgenoglu-cyber",
+  "license": "ISC",
   "engines": {
     "node": ">=16.0.0"
   },
-  "author": "busseozgenoglu-cyber",
-  "license": "ISC",
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }

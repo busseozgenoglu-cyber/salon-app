@@ -6,7 +6,7 @@ Projeyi **Türkçe karakter içermeyen** bir klasöre koyun:
 - ✅ `salon-app`, `Downloads`, `Desktop`
 - ❌ `güzellik`, `Güzellik Salonu`
 
-Türkçe karakter (ü, ğ, ş, ı, ö, ç) bazı sistemlerde webpack hatasına yol açar.
+**Not:** Bu proje artık Vite kullanıyor - html-webpack-plugin hatası tamamen giderildi.
 
 ## Adım 1: İndirme
 
@@ -35,7 +35,7 @@ Bu komut backend + React + Electron'u birlikte başlatır.
 
 ## Hata Alırsanız
 
-**"html-webpack-plugin" veya "Module not found" hatası:**
+**Genel temiz kurulum:**
 ```bash
 rm -rf node_modules package-lock.json
 npm cache clean --force

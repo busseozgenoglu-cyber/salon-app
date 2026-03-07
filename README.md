@@ -8,17 +8,19 @@ Güzellik salonu yönetimi için masaüstü uygulaması. Randevular, müşterile
 salon-app/
 ├── start.sh          # Hızlı başlatma scripti
 ├── main.js           # Electron ana dosya
-├── package.json      # Bağımlılıklar ve scriptler
+├── index.html        # Vite giriş HTML
+├── vite.config.js    # Vite yapılandırması (webpack yok)
 ├── backend/
 │   ├── server.js     # API sunucusu (Express)
 │   └── data/         # Veriler (settings, customers, appointments)
-├── src/
-│   ├── App.js        # Ana uygulama
-│   ├── api.js       # API çağrıları
-│   └── components/   # Randevular, Müşteriler, Ayarlar, Instagram Kampanya
-└── public/
-    └── index.html
+└── src/
+    ├── main.jsx      # React giriş noktası
+    ├── App.jsx       # Ana uygulama
+    ├── api.js        # API çağrıları
+    └── components/   # Randevular, Müşteriler, Ayarlar, Instagram Kampanya
 ```
+
+**Not:** Proje Vite kullanıyor - html-webpack-plugin hatası yok.
 
 ## Kurulum
 
