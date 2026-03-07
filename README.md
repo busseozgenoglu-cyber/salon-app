@@ -30,13 +30,19 @@ npm install
 
 ## Çalıştırma
 
-**Yöntem 1 - start.sh ile (Linux/Mac):**
+**Yöntem 1 - kur.sh ile (önerilen, temiz kurulum):**
+```bash
+chmod +x kur.sh
+./kur.sh
+```
+
+**Yöntem 2 - start.sh ile (Linux/Mac):**
 ```bash
 chmod +x start.sh
 ./start.sh
 ```
 
-**Yöntem 2 - npm ile:**
+**Yöntem 3 - npm ile:**
 ```bash
 npm start
 ```
