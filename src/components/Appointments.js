@@ -43,7 +43,10 @@ export default function Appointments() {
       setAppointments(Array.isArray(appRes.data) ? appRes.data : []);
       setCustomers(Array.isArray(custRes.data) ? custRes.data : []);
     } catch (err) {
-      const msg = err.response?.data?.error || err.message || 'Veriler yüklenemedi';
+      const isNetwork = err.code === 'ECONNREFUSED' || err.message?.includes('Network Error');
+      const msg = isNetwork
+        ? 'Backend sunucusu çalışmıyor. Lütfen önce "npm run server" veya "npm start" ile sunucuyu başlatın.'
+        : (err.response?.data?.error || err.message || 'Veriler yüklenemedi');
       setError(msg);
       setAppointments([]);
       setCustomers([]);
@@ -153,7 +156,16 @@ export default function Appointments() {
         </button>
       </div>
 
-      {error && <div className="alert alert-error">{error}</div>}
+      {error && (
+        <div className="alert alert-error">
+          {error}
+          {(error.includes('Backend sunucusu') || error.includes('Network')) && (
+            <button className="btn btn-secondary" style={{ marginTop: 8 }} onClick={loadData}>
+              Tekrar Dene
+            </button>
+          )}
+        </div>
+      )}
       {success && <div className="alert alert-success">{success}</div>}
 
       {showForm && (

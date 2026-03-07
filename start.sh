@@ -9,5 +9,9 @@ if [ ! -d "node_modules" ]; then
   npm install
 fi
 
+echo "NOT: Backend (port 3001) ve React (port 3000) birlikte başlatılıyor."
+echo "Randevuların çalışması için backend sunucusunun açık olması gerekir."
+echo ""
+
 # Uygulamayı başlat (backend + React + Electron)
 npm start

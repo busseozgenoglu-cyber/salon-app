@@ -15,6 +15,8 @@ const INSTAGRAM_CONTACTS_FILE = path.join(DATA_DIR, 'instagram_contacts.json');
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
+app.get('/api/health', (req, res) => res.json({ ok: true }));
+
 async function ensureDataDir() {
   try {
     await fs.mkdir(DATA_DIR, { recursive: true });

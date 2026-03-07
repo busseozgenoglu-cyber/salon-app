@@ -8,6 +8,8 @@ const api = axios.create({
   timeout: 10000,
 });
 
+export const checkBackend = () => api.get('/settings').then(() => true).catch(() => false);
+
 export const getSettings = () => api.get('/settings');
 export const saveSettings = (data) => api.put('/settings', data);
 

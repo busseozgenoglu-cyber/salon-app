@@ -39,6 +39,15 @@ chmod +x start.sh
 npm start
 ```
 
+**Önemli:** Randevu sistemi backend sunucusuna bağlıdır. `npm start` veya `./start.sh` kullandığınızda backend otomatik başlar. Sadece `npm run react-start` veya `electron .` çalıştırırsanız randevular çalışmaz - backend'i ayrıca başlatın:
+```bash
+# Terminal 1 - Backend
+npm run server
+
+# Terminal 2 - Uygulama
+npm run electron-dev
+```
+
 Bu komut:
 1. Backend API sunucusunu (port 3001) başlatır
 2. React uygulamasını (port 3000) başlatır
