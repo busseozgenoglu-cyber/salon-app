@@ -33,6 +33,12 @@
     "concurrently": "^7.6.0",
     "wait-on": "^7.0.1"
   },
+  "overrides": {
+    "html-webpack-plugin": "5.5.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "author": "busseozgenoglu-cyber",
   "license": "ISC",
   "browserslist": {
