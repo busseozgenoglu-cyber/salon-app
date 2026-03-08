@@ -8,10 +8,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "web": "concurrently \"npm run server\" \"npm run dev\"",
+    "server": "node backend/server.js",
     "electron-start": "electron .",
     "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
     "start": "concurrently \"npm run server\" \"npm run electron-dev\"",
-    "server": "node backend/server.js"
+    "dogrula": "node dogrula.js"
   },
   "dependencies": {
     "react": "^18.2.0",
